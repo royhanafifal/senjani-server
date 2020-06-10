@@ -1,5 +1,5 @@
 <?php
-class Login_model extends CI_Model 
+class Login_model extends CI_Model
 {
     public function create_pelanggan($data)
     {
@@ -10,5 +10,10 @@ class Login_model extends CI_Model
     public function get_pelanggan($email)
     {
         return $this->db->get_where('pelanggan', ['email' => $email])->result_array();
+    }
+
+    public function search_pelanggan($keyword)
+    {
+        //tidak ada
     }
 }
